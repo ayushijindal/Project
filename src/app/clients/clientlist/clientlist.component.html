@@ -1,0 +1,98 @@
+<h3>Clients List</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Project</th>
+            <th>Meeting Scheduled</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of clients">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.company}}</td>
+            <td>{{c.meeting_schedule}}</td>
+            <td>
+                <a routerLink="details/{{c.id}}" class="btn btn-success">view</a>
+                <a routerLink="editclient/{{c.id}}" class="btn btn-primary ms-2">edit</a>
+                <button (click)="delete(c.id)" class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+        <tr >
+            <td>1</td>
+            <td>Joey Tribianni</td>
+            <td>Cisco</td>
+            <td>Ecommerce Front End Deveelopment</td>
+            <td>12/1/2023 12:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Alice Cooper</td>
+            <td>Google</td>
+            <td>Login Back End Development</td>
+            <td>24/1/2023 10:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Monica Geller</td>
+            <td>Facebook</td>
+            <td>Bootstrapping Sign Up Page</td>
+            <td>14/2/2023 1:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Gunjan Garg</td>
+            <td>Accenture</td>
+            <td>Log Attendance App</td>
+            <td>6/2/2023 2:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Tarak Mehta</td>
+            <td>SBI</td>
+            <td>Bank Account Management</td>
+            <td>4/3/2023 2:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Tanya Garg</td>
+            <td>Capegimini</td>
+            <td>Employee Log Attendance App</td>
+            <td>4/2/2023 2:00</td>
+            <td>
+                <a class="btn btn-success">view</a>
+                <a  class="btn btn-primary ms-2">edit</a>
+                <button class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
